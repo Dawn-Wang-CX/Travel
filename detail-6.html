@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贡嘎雪山 - 详情</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- 左上角返回按钮 -->
+    <a
+      href="scenery.html"
+      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+      >← 返回</a
+    >
+      <!-- 1. 顶部景点大图 -->
+      <section class="w-full h-64 md:h-96 overflow-hidden">
+        <img
+          src="./images/6.jpg"
+          alt="贡嘎雪山"
+          class="w-full h-full object-cover"
+        />
+      </section>
+   
+    </header>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 class="text-3xl font-bold mb-4">贡嘎雪山</h1>
+      <div class="bg-white p-6 rounded-xl shadow mb-6 text-gray-700">
+        蜀山之王，主峰7556米，是四川最高山峰，雪山群壮观无比。
+      </div>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button
+          class="tab-btn bg-blue-600 text-white px-5 py-2 rounded-lg"
+          data-target="intro"
+        >
+          简介
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="food"
+        >
+          美食
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="hotel"
+        >
+          住宿
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="traffic"
+        >
+          交通
+        </button>
+      </div>
+      <div class="tab-pane" id="intro">
+        <div class="bg-white p-6 rounded-xl shadow">
+          贡嘎雪山位于四川省甘孜藏族自治州，是大雪山山脉的主峰，海拔7556米，为四川最高峰，被誉为"蜀山之王"。它不仅是横断山脉的最高峰，更是青藏高原以东的至高点，以雄伟磅礴的气势和极高的攀登难度，屹立于世界高山之巅。
+王者之姿，睥睨群山。 贡嘎山周围簇拥着45座海拔6000米以上的雪峰，形成众星拱月的壮丽格局。主峰呈金字塔形，山体陡峭，冰崩雪崩频发，至今仍是国际登山界最具挑战性的技术型山峰之一。天气晴好时，百公里外即可望见其银白峰顶，如一把利剑直刺苍穹。
+冰川王国，林海雪原。 贡嘎山区拥有现代冰川159条，面积约390平方公里，其中海螺沟冰川最为著名——它是世界上仅存的低海拔冰川之一，冰川末端深入原始森林，形成"冰川与森林共生"的奇观。大冰瀑布宽达1100米，落差1080米，气势磅礴，举世罕见。山脚下是茂密的原始森林，从亚热带常绿阔叶林到高山灌丛草甸，垂直自然带谱完整而丰富。
+云海佛光，日照金山。 子梅垭口、冷嘎措、牛背山、华尖山……众多观景平台环绕贡嘎，是摄影师和旅行者追逐光影的圣地。清晨，第一缕阳光洒向主峰，雪峰由绯红渐变为金黄，"日照金山"的震撼足以让人热泪盈眶；黄昏，云海翻涌如汪洋，佛光时隐时现，仿佛置身仙境。
+藏彝走廊，人文秘境。 贡嘎山域是藏、彝、汉等多民族交汇之地，甲根坝的藏式碉楼、上木居的淳朴藏寨、海螺沟的温泉古镇，古老的文化与壮美的自然交融共生。转山朝圣的信徒、放牧高原的牧民，为这片雪域增添了温暖的人间气息。
+贡嘎雪山，是地理的极限，是视觉的盛宴，更是灵魂的叩问。当你站在它的面前，会深刻感受到人类的渺小与自然的伟大。蜀山之王，以王者之姿，静候每一位心怀敬畏的来访者。
+        </div>
+      </div>
+      
+     <div class="tab-pane hidden" id="food">
+  <div class="bg-white p-6 rounded-xl shadow space-y-6 max-w-xl mx-auto">
+    <!-- 藏面 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/6-food1.jpg" class="w-full h-full object-cover" alt="藏面">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">藏面</p>
+        <p class="text-gray-600 text-sm">传统藏式面食，口感劲道，风味独特</p>
+      </div>
+    </div>
+
+    <!-- 土火锅 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/6-food2.jpg" class="w-full h-full object-cover" alt="土火锅">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">土火锅</p>
+        <p class="text-gray-600 text-sm">铜锅慢炖，食材丰盛，藏家特色</p>
+      </div>
+    </div>
+
+    <!-- 酥油茶 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/6-food3.jpg" class="w-full h-full object-cover" alt="酥油茶">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">酥油茶</p>
+        <p class="text-gray-600 text-sm">醇香浓郁，高原必备饮品</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="tab-pane hidden" id="hotel">
+        <div class="bg-white p-6 rounded-xl shadow">
+          康定市区、新都桥酒店，价格180-500元。
+        </div>
+      </div>
+      <div class="tab-pane hidden" id="traffic">
+        <div class="bg-white p-6 rounded-xl shadow">
+          成都自驾至康定3.5小时；康定至各观景台约1小时。
+        </div>
+      </div>
+    </main>
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((p) => p.classList.add("hidden"));
+          tabs.forEach((t) => {
+            t.classList.remove("bg-blue-600", "text-white");
+            t.classList.add("bg-gray-200");
+          });
+          document
+            .getElementById(tab.dataset.target)
+            .classList.remove("hidden");
+          tab.classList.add("bg-blue-600", "text-white");
+        });
+      });
+    </script>
+     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+      <p>© 2026 川西旅游网 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

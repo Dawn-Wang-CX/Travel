@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>九寨沟 - 详情</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- 左上角返回按钮 -->
+    <a
+      href="scenery.html"
+      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+      >← 返回</a
+    >
+      <!-- 1. 顶部景点大图 -->
+      <section class="w-full h-64 md:h-96 overflow-hidden">
+        <img
+          src="./images/2.jpg"
+          alt="九寨沟"
+          class="w-full h-full object-cover"
+        />
+      </section>
+    </header>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 class="text-3xl font-bold mb-4">九寨沟</h1>
+      <div class="bg-white p-6 rounded-xl shadow mb-6 text-gray-700">
+        九寨归来不看水，以翠海、叠瀑、彩林、雪峰闻名，由三条沟组成绝美自然景观。
+      </div>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button
+          class="tab-btn bg-blue-600 text-white px-5 py-2 rounded-lg"
+          data-target="intro"
+        >
+          简介
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="food"
+        >
+          美食
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="hotel"
+        >
+          住宿
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="traffic"
+        >
+          交通
+        </button>
+      </div>
+
+      <div class="tab-pane" id="intro">
+        <div class="bg-white p-6 rounded-xl shadow">
+          九寨沟位于四川省阿坝藏族羌族自治州，是中国第一个以保护自然风景为主要目的的自然保护区，也是世界自然遗产、国家5A级旅游景区。
+          这里以"九寨归来不看水"闻名天下。翠海、叠瀑、彩林、雪峰、藏情、蓝冰，构成了九寨沟六绝。108个海子如宝石般镶嵌在沟谷之间，五花海色彩斑斓，长海静谧深邃，珍珠滩瀑布气势磅礴，诺日朗瀑布宽达300米，是中国最宽的钙华瀑布。湖水因矿物质和藻类呈现出梦幻般的蓝绿色，随季节和光线变幻万千。
+四周雪峰耸立，原始森林覆盖率达80%以上。春之花草、夏之流瀑、秋之红叶、冬之蓝冰，四季皆成画卷。这里还是大熊猫、金丝猴等珍稀动物的栖息地。
+九寨沟不仅是大自然的鬼斧神工，更承载着古老的藏族文化。九个藏族村寨世代相守，经幡飘扬，转经筒轻响，为这片净土增添了神秘而温暖的人文气息。
+走进九寨沟，便是走进一幅流动的山水画，一次洗涤心灵的人间朝圣。
+        </div>
+      </div>
+      
+           <div class="tab-pane hidden" id="food">
+        <div class="bg-white p-6 rounded-xl shadow space-y-6 max-w-xl mx-auto">
+          <!-- 牦牛肉火锅 -->
+          <div class="text-center">
+            <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+              <img src="./images/2-food1.jpg" class="w-full h-full object-cover" alt="牦牛肉火锅">
+            </div>
+            <div class="mt-2">
+              <p class="font-bold">牦牛肉火锅</p>
+              <p class="text-gray-600 text-sm">高原特色牦牛肉，肉质鲜嫩，汤底浓郁，营养丰富</p>
+            </div>
+          </div>
+
+          <!-- 藏式土火锅 -->
+          <div class="text-center">
+            <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+              <img src="./images/2-food3.jpg" class="w-full h-full object-cover" alt="藏式土火锅">
+            </div>
+            <div class="mt-2">
+              <p class="font-bold">藏式土火锅</p>
+              <p class="text-gray-600 text-sm">传统铜锅炖煮，食材丰富，藏式风味十足</p>
+            </div>
+          </div>
+
+          <!-- 酥油茶 -->
+          <div class="text-center">
+            <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+              <img src="./images/2-food2.jpg" class="w-full h-full object-cover" alt="酥油茶">
+            </div>
+            <div class="mt-2">
+              <p class="font-bold">酥油茶</p>
+              <p class="text-gray-600 text-sm">藏族特色饮品，醇香浓郁，缓解高原反应</p>
+            </div>
+          </div>
+
+          <!-- 青稞饼 -->
+          <div class="text-center">
+            <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+              <img src="./images/2-food4.jpg" class="w-full h-full object-cover" alt="青稞饼">
+            </div>
+            <div class="mt-2">
+              <p class="font-bold">青稞饼</p>
+              <p class="text-gray-600 text-sm">高原青稞制作，外酥里软，健康粗粮</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="tab-pane hidden" id="hotel">
+        <div class="bg-white p-6 rounded-xl shadow">
+          漳扎镇酒店/民宿，步行可达景区，价格200-500元，可住藏式民宿。
+        </div>
+      </div>
+      <div class="tab-pane hidden" id="traffic">
+        <div class="bg-white p-6 rounded-xl shadow">
+          飞机：成都→九寨机场约1小时，转车1.5小时；高铁2小时；自驾约7-8小时。
+        </div>
+      </div>
+    </main>
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((p) => p.classList.add("hidden"));
+          tabs.forEach((t) => {
+            t.classList.remove("bg-blue-600", "text-white");
+            t.classList.add("bg-gray-200");
+          });
+          document
+            .getElementById(tab.dataset.target)
+            .classList.remove("hidden");
+          tab.classList.add("bg-blue-600", "text-white");
+        });
+      });
+    </script>
+     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+      <p>© 2026 川西旅游网 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

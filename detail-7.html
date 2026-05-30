@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>墨石公园 - 详情</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- 左上角返回按钮 -->
+    <a
+      href="scenery.html"
+      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+      >← 返回</a
+    >
+      <!-- 1. 顶部景点大图 -->
+      <section class="w-full h-64 md:h-96 overflow-hidden">
+        <img
+          src="./images/7.jpg"
+          alt="墨石公园"
+          class="w-full h-full object-cover"
+        />
+      </section>
+    
+    </header>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 class="text-3xl font-bold mb-4">墨石公园</h1>
+      <div class="bg-white p-6 rounded-xl shadow mb-6 text-gray-700">
+        世界唯一糜棱岩石林，如同异域星球，黑灰色岩体随光线变色。
+      </div>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button
+          class="tab-btn bg-blue-600 text-white px-5 py-2 rounded-lg"
+          data-target="intro"
+        >
+          简介
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="food"
+        >
+          美食
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="hotel"
+        >
+          住宿
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="traffic"
+        >
+          交通
+        </button>
+      </div>
+      <div class="tab-pane" id="intro">
+        <div class="bg-white p-6 rounded-xl shadow">
+          墨石公园位于四川省甘孜藏族自治州道孚县八美镇，地处中国最美景观大道318国道核心区，是国家4A级旅游景区，被誉为"中国最美景观大道第八美"。这里拥有世界罕见的高原石林景观，是中国唯一的高原石林，也是地质学上的奇观。
+糜棱岩石林，墨色幻境。 墨石公园的核心景观由糜棱岩构成，这种岩石因地质断裂活动和长期风化侵蚀，形成了千姿百态的石林地貌。灰黑色的石林如刀削斧劈，或如城堡林立，或如巨兽蛰伏，或如神兵列阵……在高原强烈的光影对比下，石林呈现出深邃的墨色，仿佛一片来自外星的异域世界，神秘而冷峻。
+四季变色，光影魔术。 墨石公园最神奇之处在于"变色"——春季和冬季，石林呈浅灰色与蓝色；夏季受雨水浸润，变为苍黑色；秋季则因干燥而呈现浅灰色与黄色。晴天时石林呈深蓝色，阴天时呈墨黑色，被誉为"变色石林"。加之高原变幻莫测的光影，同一处景观在不同时刻呈现出截然不同的面貌，令人叹为观止。
+高原草甸，藏寨牧歌。 石林之外，是辽阔的高山草甸，春夏时节野花遍地，牦牛悠然，远处雪山连绵。公园附近的八美镇是藏族聚居地，白墙红檐的藏式民居点缀其间，经幡飘扬，炊烟袅袅，浓郁的藏地风情为这片冷峻的石林增添了温暖的人间色彩。
+摄影天堂，网红打卡。 墨石公园独特的视觉冲击力使其成为摄影爱好者和旅行博主的必打卡之地。穿一袭红裙或白衣漫步石林间，强烈的色彩对比随手一拍便是大片。这里是《鬼吹灯》等影视作品的取景灵感来源，也是无数人心中的"异域星球"。
+墨石公园，是大自然用亿万年的地质运动书写的一首诗，是高原上最独特的黑色童话。走进这片墨色幻境，仿佛穿越到了另一个星球，让人不禁感叹：地球之美，远超想象。
+        </div>
+      </div>
+
+      <div class="tab-pane hidden" id="food">
+  <div class="bg-white p-6 rounded-xl shadow space-y-6 max-w-xl mx-auto">
+    <!-- 藏餐 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/7-food1.jpg" class="w-full h-full object-cover" alt="藏餐">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">藏餐</p>
+        <p class="text-gray-600 text-sm">高原特色藏式美食，风味地道</p>
+      </div>
+    </div>
+
+    <!-- 牦牛肉包子 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/7-food2.jpg" class="w-full h-full object-cover" alt="牦牛肉包子">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">牦牛肉包子</p>
+        <p class="text-gray-600 text-sm">皮薄馅足，牦牛肉鲜香可口</p>
+      </div>
+    </div>
+
+    <!-- 青稞饼 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/7-food3.jpg" class="w-full h-full object-cover" alt="青稞饼">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">青稞饼</p>
+        <p class="text-gray-600 text-sm">外酥里软，高原健康粗粮</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="tab-pane hidden" id="hotel">
+        <div class="bg-white p-6 rounded-xl shadow">
+          八美镇藏式客栈，价格100-200元；也可住新都桥。
+        </div>
+      </div>
+      <div class="tab-pane hidden" id="traffic">
+        <div class="bg-white p-6 rounded-xl shadow">
+          新都桥自驾约1小时；拼车30-50元。
+        </div>
+      </div>
+    </main>
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((p) => p.classList.add("hidden"));
+          tabs.forEach((t) => {
+            t.classList.remove("bg-blue-600", "text-white");
+            t.classList.add("bg-gray-200");
+          });
+          document
+            .getElementById(tab.dataset.target)
+            .classList.remove("hidden");
+          tab.classList.add("bg-blue-600", "text-white");
+        });
+      });
+    </script>
+     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+      <p>© 2026 川西旅游网 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>四姑娘山 - 详情</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- 左上角返回按钮 -->
+    <a
+      href="scenery.html"
+      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+      >← 返回</a
+    >
+      <!-- 1. 顶部景点大图 -->
+      <section class="w-full h-64 md:h-96 overflow-hidden">
+        <img
+          src="./images/4.jpg"
+          alt="四姑娘山"
+          class="w-full h-full object-cover"
+        />
+      </section>
+   
+    </header>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 class="text-3xl font-bold mb-4">四姑娘山</h1>
+      <div class="bg-white p-6 rounded-xl shadow mb-6 text-gray-700">
+        被誉为“东方阿尔卑斯”，四座雪山连绵，幺妹峰海拔6250米，被称为蜀山之后。
+      </div>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button
+          class="tab-btn bg-blue-600 text-white px-5 py-2 rounded-lg"
+          data-target="intro"
+        >
+          简介
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="food"
+        >
+          美食
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="hotel"
+        >
+          住宿
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="traffic"
+        >
+          交通
+        </button>
+      </div>
+      <div class="tab-pane" id="intro">
+        <div class="bg-white p-6 rounded-xl shadow">
+          四姑娘山位于四川省阿坝藏族羌族自治州小金县，由四座连绵的雪山组成，从北到南依次为大姑娘山、二姑娘山、三姑娘山和幺妹峰（海拔6250米），四座山峰终年积雪，如同四位身披白纱的仙女亭亭玉立，其中幺妹峰被誉为"蜀山之后"，是四川第二高峰，也是国际登山界公认的难度极高的技术型山峰之一。
+雪山巍峨，冰川壮丽。 四姑娘山拥有丰富的现代冰川和古冰川遗迹，双桥沟、长坪沟、海子沟三大沟谷各具风姿。双桥沟开发最完善，可乘坐观光车直达雪山脚下，沿途布达拉峰、四姑娜措、撵鱼坝等景点如画卷徐徐展开；长坪沟是徒步和登山的经典线路，可近距离仰望幺妹峰的雄姿；海子沟则是户外爱好者的天堂，数十个高山海子星罗棋布，花海子、犀牛海、夫妻海……每一个都如蓝宝石般镶嵌在雪山之间。
+高山草甸，花海如潮。 春夏之交，漫山遍野的高山杜鹃、报春花、龙胆花竞相绽放，与碧绿的草甸、清澈的溪流、悠闲的牦牛构成一幅绝美的川西牧歌图。秋季层林尽染，彩林与雪山交相辉映，更是摄影爱好者的天堂。
+嘉绒藏族，风情浓郁。 山脚下的日隆镇（现四姑娘山镇）是嘉绒藏族聚居地，碉楼藏寨、经幡白塔、锅庄弦子，浓郁的民族风情为这片雪山圣境增添了温暖的人间烟火。
+四姑娘山集登山、徒步、摄影、观光于一体，无论是挑战自我的户外勇士，还是追寻诗与远方的旅行者，都能在这里找到属于自己的山川答案。这里是离成都最近的雪山秘境，也是无数人心中的"东方阿尔卑斯"。
+        </div>
+      </div>
+
+      <div class="tab-pane hidden" id="food">
+  <div class="bg-white p-6 rounded-xl shadow space-y-6 max-w-xl mx-auto">
+    <!-- 牦牛肉汤锅 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/4-food2.jpg" class="w-full h-full object-cover" alt="牦牛肉汤锅">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">牦牛肉汤锅</p>
+        <p class="text-gray-600 text-sm">高原鲜牦牛肉炖煮，汤鲜肉嫩，暖身滋补</p>
+      </div>
+    </div>
+
+    <!-- 烤全羊 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/4-food1.jpg" class="w-full h-full object-cover" alt="烤全羊">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">烤全羊</p>
+        <p class="text-gray-600 text-sm">外焦里嫩，香气扑鼻，特色招牌美食</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="tab-pane hidden" id="hotel">
+        <div class="bg-white p-6 rounded-xl shadow">
+          四姑娘山镇酒店、空山民宿，价格200-500元。
+        </div>
+      </div>
+      <div class="tab-pane hidden" id="traffic">
+        <div class="bg-white p-6 rounded-xl shadow">
+          成都自驾约4小时；茶店子大巴至小金县转车约5小时。
+        </div>
+      </div>
+    </main>
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((p) => p.classList.add("hidden"));
+          tabs.forEach((t) => {
+            t.classList.remove("bg-blue-600", "text-white");
+            t.classList.add("bg-gray-200");
+          });
+          document
+            .getElementById(tab.dataset.target)
+            .classList.remove("hidden");
+          tab.classList.add("bg-blue-600", "text-white");
+        });
+      });
+    </script>
+    <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+      <p>© 2026 川西旅游网 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

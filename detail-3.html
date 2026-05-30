@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>黄龙 - 详情</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-gray-50">
+   <!-- 左上角返回按钮 -->
+    <a
+      href="scenery.html"
+      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+      >← 返回</a
+    >
+      <!-- 1. 顶部景点大图 -->
+      <section class="w-full h-64 md:h-96 overflow-hidden">
+        <img
+          src="./images/3.jpg"
+          alt="黄龙"
+          class="w-full h-full object-cover"
+        />
+      </section>
+   
+    </header>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 class="text-3xl font-bold mb-4">黄龙</h1>
+      <div class="bg-white p-6 rounded-xl shadow mb-6 text-gray-700">
+        黄龙被誉为“人间瑶池”，以钙华彩池群为核心，雪山环抱，池水随光线变幻色彩。
+      </div>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button
+          class="tab-btn bg-blue-600 text-white px-5 py-2 rounded-lg"
+          data-target="intro"
+        >
+          简介
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="food"
+        >
+          美食
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="hotel"
+        >
+          住宿
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="traffic"
+        >
+          交通
+        </button>
+      </div>
+      <div class="tab-pane" id="intro">
+        <div class="bg-white p-6 rounded-xl shadow">
+          黄龙位于四川省阿坝藏族羌族自治州松潘县，与九寨沟相距仅约100公里，是世界自然遗产、世界生物圈保护区，以"彩池、雪山、峡谷、森林"四绝闻名于世。
+钙华彩池，举世无双。 黄龙拥有世界上规模最大、保存最完好的高原钙华景观。3400余个彩池层层叠叠，宛如巨龙身上的金色鳞片，从山脚蜿蜒至山顶。五彩池、争艳池、明镜池……池水因矿物质沉淀和光线折射，呈现出碧蓝、翠绿、鹅黄、橙红等梦幻色彩，被誉为"人间瑶池"。
+雪山巍峨，原始森林。 岷山主峰雪宝顶海拔5588米，终年积雪，银装素裹，与山下彩池形成鲜明对比。沟内原始森林茂密，古木参天，是大熊猫、金丝猴、珙桐等珍稀动植物的家园。
+峡谷幽深，飞瀑流泉。 黄龙沟全长3.6公里，峡谷两侧峭壁如削，金沙铺地、洗身洞、飞瀑流辉等景点星罗棋布，每一处都是大自然的鬼斧神工。
+黄龙与九寨沟并称"川西北双璧"，如果说九寨沟是水之精灵，黄龙便是钙华艺术的巅峰之作。走进黄龙，便是走进一幅流动的地质画卷，一次震撼心灵的自然朝圣。
+        </div>
+        
+      </div>
+     <div class="tab-pane hidden" id="food">
+  <div class="bg-white p-6 rounded-xl shadow space-y-6 max-w-xl mx-auto">
+    <!-- 藏餐 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/3-food1.jpg" class="w-full h-full object-cover" alt="藏餐">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">藏餐</p>
+        <p class="text-gray-600 text-sm">高原特色风味，食材天然，营养丰富</p>
+      </div>
+    </div>
+
+    <!-- 青稞酒 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/3-food2.jpg" class="w-full h-full object-cover" alt="青稞酒">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">青稞酒</p>
+        <p class="text-gray-600 text-sm">青稞酿造，醇香绵甜，高原特色饮品</p>
+      </div>
+    </div>
+
+    <!-- 高原菌菇菜 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/3-food3.jpg" class="w-full h-full object-cover" alt="高原菌菇菜">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">高原菌菇菜</p>
+        <p class="text-gray-600 text-sm">野生菌菇鲜美可口，清淡养生</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="tab-pane hidden" id="hotel">
+        <div class="bg-white p-6 rounded-xl shadow">
+          川主寺镇酒店、松潘古城客栈，价格150-400元。
+        </div>
+      </div>
+      <div class="tab-pane hidden" id="traffic">
+        <div class="bg-white p-6 rounded-xl shadow">
+          九寨沟包车约2小时；成都大巴至松潘约6小时，再转车前往。
+        </div>
+      </div>
+    </main>
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((p) => p.classList.add("hidden"));
+          tabs.forEach((t) => {
+            t.classList.remove("bg-blue-600", "text-white");
+            t.classList.add("bg-gray-200");
+          });
+          document
+            .getElementById(tab.dataset.target)
+            .classList.remove("hidden");
+          tab.classList.add("bg-blue-600", "text-white");
+        });
+      });
+    </script>
+     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+      <p>© 2026 川西旅游网 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

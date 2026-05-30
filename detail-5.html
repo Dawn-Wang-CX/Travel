@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>稻城亚丁 - 详情</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- 左上角返回按钮 -->
+    <a
+      href="scenery.html"
+      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+      >← 返回</a
+    >
+      <!-- 1. 顶部景点大图 -->
+      <section class="w-full h-64 md:h-96 overflow-hidden">
+        <img
+          src="./images/5.jpg"
+          alt="稻城亚丁"
+          class="w-full h-full object-cover"
+        />
+      </section>
+    
+    </header>
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 class="text-3xl font-bold mb-4">稻城亚丁</h1>
+      <div class="bg-white p-6 rounded-xl shadow mb-6 text-gray-700">
+        被称为蓝色星球上最后一片净土，三神山与三大海子构成世界级景观。
+      </div>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button
+          class="tab-btn bg-blue-600 text-white px-5 py-2 rounded-lg"
+          data-target="intro"
+        >
+          简介
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="food"
+        >
+          美食
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="hotel"
+        >
+          住宿
+        </button>
+        <button
+          class="tab-btn bg-gray-200 px-5 py-2 rounded-lg"
+          data-target="traffic"
+        >
+          交通
+        </button>
+      </div>
+      <div class="tab-pane" id="intro">
+        <div class="bg-white p-6 rounded-xl shadow">
+          稻城亚丁位于四川省甘孜藏族自治州稻城县香格里拉镇，地处青藏高原东部，横断山脉中段，是国家级自然保护区、世界生物圈保护区，被誉为"蓝色星球上的最后一片净土""香格里拉之魂"。
+三怙主神山，神圣庄严。 亚丁的核心是三座呈"品"字形排列的雪山——仙乃日（观音菩萨，海拔6032米）、央迈勇（文殊菩萨，海拔5958米）、夏诺多吉（金刚手菩萨，海拔5958米），合称"三怙主神山"。三座神山终年积雪，峰形各异：仙乃日如大佛端坐，央迈勇似少女娴静，夏诺多吉像少年英武。在藏传佛教中，这里是朝圣者心中的圣地，转山一圈，功德无量。
+三海圣湖，纯净如镜。 神山之下，珍珠海、牛奶海、五色海三大高原湖泊如宝石般镶嵌其间。珍珠海碧绿如玉，倒映仙乃日全貌；牛奶海因周边一圈乳白色钙华沉积而得名，湖水清冽湛蓝；五色海在阳光的折射下变幻出五种色彩，传说能"返演历史，预测未来"。
+洛绒牛场，人间天堂。 海拔4150米的洛绒牛场是观赏三神山的最佳位置，贡嘎河从草场穿梭而过，林间溪流潺潺，木屋点点，牦牛成群，春夏时节野花遍地，宛如童话世界。这里是电影《从你的全世界路过》的取景地，茅十八向荔枝求婚的场景让无数人向往。
+高原秘境，生态宝库。 亚丁拥有完整的高山生态系统，从峡谷草甸到冰川雪峰，垂直分布着丰富的植被和珍稀动物。春天杜鹃花海，夏日绿茵如毯，秋季彩林尽染，冬日银装素裹，四季皆成绝景。
+稻城亚丁，是摄影家的天堂、徒步者的圣地、旅行者的心灵归宿。当你站在洛绒牛场，仰望三座神山在云雾中若隐若现，所有的疲惫都会化为敬畏与感动。这里的美，纯净得不染尘埃，神圣得让人屏息——这便是香格里拉的真谛。
+        </div>
+      </div>
+
+     <div class="tab-pane hidden" id="food">
+  <div class="bg-white p-6 rounded-xl shadow space-y-6 max-w-xl mx-auto">
+    <!-- 牦牛肉火锅 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/5-food1.jpg" class="w-full h-full object-cover" alt="牦牛肉火锅">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">牦牛肉火锅</p>
+        <p class="text-gray-600 text-sm">高原牦牛肉鲜嫩多汁，汤底浓郁滋补</p>
+      </div>
+    </div>
+
+    <!-- 松茸炖鸡 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/5-food2.jpg" class="w-full h-full object-cover" alt="松茸炖鸡">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">松茸炖鸡</p>
+        <p class="text-gray-600 text-sm">野生松茸搭配土鸡，鲜香养生</p>
+      </div>
+    </div>
+
+    <!-- 高原鳕鱼 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/5-food3.jpg" class="w-full h-full object-cover" alt="高原鳕鱼">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">高原鳕鱼</p>
+        <p class="text-gray-600 text-sm">肉质细嫩，原生态高原水产</p>
+      </div>
+    </div>
+
+    <!-- 牦牛酸奶 -->
+    <div class="text-center">
+      <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
+        <img src="./images/5-food4.jpg" class="w-full h-full object-cover" alt="牦牛酸奶">
+      </div>
+      <div class="mt-2">
+        <p class="font-bold">牦牛酸奶</p>
+        <p class="text-gray-600 text-sm">醇厚香浓，天然营养助消化</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="tab-pane hidden" id="hotel">
+        <div class="bg-white p-6 rounded-xl shadow">
+          香格里拉镇、亚丁村民宿，价格200-800元。
+        </div>
+      </div>
+      <div class="tab-pane hidden" id="traffic">
+        <div class="bg-white p-6 rounded-xl shadow">
+          飞机至亚丁机场再转车；自驾约12小时。
+        </div>
+      </div>
+    </main>
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-pane")
+            .forEach((p) => p.classList.add("hidden"));
+          tabs.forEach((t) => {
+            t.classList.remove("bg-blue-600", "text-white");
+            t.classList.add("bg-gray-200");
+          });
+          document
+            .getElementById(tab.dataset.target)
+            .classList.remove("hidden");
+          tab.classList.add("bg-blue-600", "text-white");
+        });
+      });
+    </script>
+     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+      <p>© 2026 川西旅游网 All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
