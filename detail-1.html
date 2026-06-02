@@ -9,7 +9,7 @@
   <body class="bg-gray-50">
     <!-- 左上角返回按钮 -->
     <a
-      href="scenery.html"
+      href="javascript:history.back()"
       class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
       >← 返回</a
     >
@@ -17,7 +17,7 @@
     <!-- 1. 顶部景点大图 -->
     <section class="w-full h-64 md:h-96 overflow-hidden">
       <img
-        src="./images/1.jpg"
+        src="images/1.jpg"
         alt="青城山·都江堰"
         class="w-full h-full object-cover"
       />
@@ -89,7 +89,7 @@
           <div class="text-center">
             <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
               <img
-                src="./images/1-food1.jpg"
+                src="images/1-food1.jpg"
                 class="w-full h-full object-cover"
                 alt="葱葱卷"
               />
@@ -107,7 +107,7 @@
           <div class="text-center">
             <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
               <img
-                src="./images/1-food2.jpg"
+                src="images/1-food2.jpg"
                 class="w-full h-full object-cover"
                 alt="叶儿粑"
               />
@@ -125,7 +125,7 @@
           <div class="text-center">
             <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
               <img
-                src="./images/1-food3.jpg"
+                src="images/1-food3.jpg"
                 class="w-full h-full object-cover"
                 alt="赵卖面"
               />
@@ -143,7 +143,7 @@
           <div class="text-center">
             <div class="w-33 h-33 rounded-lg overflow-hidden shadow mx-auto">
               <img
-                src="./images/1-food4.jpg"
+                src="images/1-food4.jpg"
                 class="w-full h-full object-cover"
                 alt="道家素斋"
               />
@@ -190,23 +190,33 @@
       const tabs = document.querySelectorAll(".tab-btn");
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-          // 隐藏所有面板
           document
             .querySelectorAll(".tab-pane")
             .forEach((p) => p.classList.add("hidden"));
-          // 重置按钮样式
           tabs.forEach((t) => {
             t.classList.remove("bg-blue-600", "text-white");
             t.classList.add("bg-gray-200");
           });
-          // 显示当前面板
           const target = document.getElementById(tab.dataset.target);
           target.classList.remove("hidden");
           tab.classList.remove("bg-gray-200");
           tab.classList.add("bg-blue-600", "text-white");
         });
       });
+
+      window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tab = urlParams.get("tab");
+
+        if (tab === "food")
+          document.querySelector('[data-target="food"]').click();
+        if (tab === "traffic")
+          document.querySelector('[data-target="traffic"]').click();
+        if (tab === "hotel")
+          document.querySelector('[data-target="hotel"]').click();
+      };
     </script>
+
     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>

@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body class="bg-gray-50">
-    <!-- 左上角返回按钮 -->
-    <a
-      href="scenery.html"
-      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
-      >← 返回</a
-    >
+   <!-- 左上角返回按钮 -->
+<a
+  href="javascript:history.back()"
+  class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+>← 返回</a>
       <!-- 1. 顶部景点大图 -->
       <section class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -109,28 +108,55 @@
       </div>
       <div class="tab-pane hidden" id="traffic">
         <div class="bg-white p-6 rounded-xl shadow">
-          成都自驾至康定3.5小时；康定至各观景台约1小时。
+          🚗 最推荐：自驾/包车<br>
+          路线：成都 → 雅康高速 → 康定 → 折多山 → 新都桥 → 各观景点<br>
+          距离：成都至康定约270公里（高速3小时），康定至新都桥约75公里（G318，1.5-2小时）<br>
+          路况：雅康高速已全线通车，康定至新都桥为G318国道，铺装路面良好，但折多山段弯多坡陡，需谨慎驾驶<br>
+          | 观景点              | 距新都桥距离      | 车程     | 路况特点                    |<br>
+          | ---------------- | ----------- | ------ | ----------------------- |<br>
+          | **子梅垭口**         | 约100公里      | 约3-4小时 | 需经上木居村，后段为碎石路，建议SUV     |<br>
+          | **冷嘎措**          | 约70公里       | 约2-3小时 | 至帮木吉德村后需骑马或徒步1.5小时      |<br>
+          | **鱼子西**          | 约40公里       | 约1小时   | 最后一段为碎石路，轿车可缓慢通行        |<br>
+          | **甲根坝（泽桑拉空中花园）** | 约30公里       | 约40分钟  | 路况良好，轿车可达               |<br>
+          | **王岗坪**          | 约280公里（经石棉） | 约4-5小时 | 成都→雅安→石棉→S211→王岗坪，路况良好  |<br><br>
+          🚌 公共交通<br>
+          成都 → 康定<br>
+          大巴：成都新南门汽车站，每日多班，车程约3-4小时，票价约120-150元 <br>
+          茶店子客运站：也有发往康定的班车，发车时间9:00、11:00、13:00 <br><br>
+          康定 → 新都桥/各观景点<br>
+          康定汽车站有发往新都桥的班车，车程约1.5-2小时<br>
+          新都桥至各观景点（子梅垭口、冷嘎措等）需包车或拼车，当地有很多3-5天环线拼车，人均800-1200元，含住宿和门票 <br><br>
+          成都 → 海螺沟（磨西镇）<br>
+          成都新南门汽车站每日有直达海螺沟的班车，全程6-7小时，直接到贡嘎山脚下的磨西镇 <br><br><br>
+
         </div>
       </div>
     </main>
-    <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".tab-pane")
-            .forEach((p) => p.classList.add("hidden"));
-          tabs.forEach((t) => {
-            t.classList.remove("bg-blue-600", "text-white");
-            t.classList.add("bg-gray-200");
-          });
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-          tab.classList.add("bg-blue-600", "text-white");
-        });
+   <script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      tabs.forEach((t) => {
+        t.classList.remove("bg-blue-600", "text-white");
+        t.classList.add("bg-gray-200");
       });
-    </script>
+      const target = document.getElementById(tab.dataset.target);
+      target.classList.remove("hidden");
+      tab.classList.remove("bg-gray-200");
+      tab.classList.add("bg-blue-600", "text-white");
+    });
+  });
+
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get("tab");
+    
+    if (tab === "food") document.querySelector('[data-target="food"]').click();
+    if (tab === "traffic") document.querySelector('[data-target="traffic"]').click();
+    if (tab === "hotel") document.querySelector('[data-target="hotel"]').click();
+  };
+</script>
      <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>

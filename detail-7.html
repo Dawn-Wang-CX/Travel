@@ -8,11 +8,10 @@
   </head>
   <body class="bg-gray-50">
     <!-- 左上角返回按钮 -->
-    <a
-      href="scenery.html"
-      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
-      >← 返回</a
-    >
+<a
+  href="javascript:history.back()"
+  class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+>← 返回</a>
       <!-- 1. 顶部景点大图 -->
       <section class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -109,28 +108,51 @@
       </div>
       <div class="tab-pane hidden" id="traffic">
         <div class="bg-white p-6 rounded-xl shadow">
-          新都桥自驾约1小时；拼车30-50元。
+          🚗 最推荐：自驾/包车<br>
+          路线：成都 → 京昆高速 → 雅康高速 → 康定出口 → G318国道翻越折多山（海拔4298米）→ S434省道 → 塔公镇 → 墨石公园<br>
+          距离：约350公里 <br>
+          耗时：约5-6小时 <br>
+          路况：雅康高速已全线通车，康定至折多山段为G318国道，铺装路面良好，但折多山段弯多坡陡，需谨慎驾驶；S434省道至墨石公园路况良好<br><br>
+          🚌 公共交通<br>
+          ①路线一：成都直达八美/道孚<br>
+          成都新南门汽车站：每日早上06:30发车，到八美票价145元/人，到道孚票价167元/人 <br>
+          到达八美镇后，打车约10分钟即可到达墨石公园景区 <br><br>
+          ②路线二：成都 → 康定 → 八美<br>
+          成都 → 康定：成都新南门或茶店子车站乘大巴至康定市，车程约3-4小时 <br>
+          康定 → 八美：康定汽车站乘发往道孚、炉霍或丹巴方向的班车，中途在八美镇或墨石公园景区门口下车，票价72/45/64元不等，车程约3小时；一天发6班车 <br>
+         <br> ③路线三：成都 → 丹巴 → 墨石公园<br>
+          成都 → 丹巴：乘大巴至丹巴县城<br>
+          丹巴 → 墨石公园：丹巴包车约150元/车，全程110公里，均为沙石路，比较平整，好行驶；也可乘班车，每早发车，车费约26元 <br><br>
+
+
         </div>
       </div>
     </main>
-    <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".tab-pane")
-            .forEach((p) => p.classList.add("hidden"));
-          tabs.forEach((t) => {
-            t.classList.remove("bg-blue-600", "text-white");
-            t.classList.add("bg-gray-200");
-          });
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-          tab.classList.add("bg-blue-600", "text-white");
-        });
+   <script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      tabs.forEach((t) => {
+        t.classList.remove("bg-blue-600", "text-white");
+        t.classList.add("bg-gray-200");
       });
-    </script>
+      const target = document.getElementById(tab.dataset.target);
+      target.classList.remove("hidden");
+      tab.classList.remove("bg-gray-200");
+      tab.classList.add("bg-blue-600", "text-white");
+    });
+  });
+
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get("tab");
+    
+    if (tab === "food") document.querySelector('[data-target="food"]').click();
+    if (tab === "traffic") document.querySelector('[data-target="traffic"]').click();
+    if (tab === "hotel") document.querySelector('[data-target="hotel"]').click();
+  };
+</script>
      <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>

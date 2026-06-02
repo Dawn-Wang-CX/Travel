@@ -8,11 +8,10 @@
   </head>
   <body class="bg-gray-50">
    <!-- 左上角返回按钮 -->
-    <a
-      href="scenery.html"
-      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
-      >← 返回</a
-    >
+<a
+  href="javascript:history.back()"
+  class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+>← 返回</a>
       <!-- 1. 顶部景点大图 -->
       <section class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -109,28 +108,55 @@
       </div>
       <div class="tab-pane hidden" id="traffic">
         <div class="bg-white p-6 rounded-xl shadow">
-          九寨沟包车约2小时；成都大巴至松潘约6小时，再转车前往。
+          🚄 最推荐：高铁 + 景区直通车<br>
+          | 车次    | 发车站 | 发车时间  | 到达时间  | 全程时长     | 二等座票价    |<br>
+          | ----- | --- | ----- | ----- | -------- | -------- |<br>
+          | C5782 | 成都东 | 06:45 | 08:24 | 约1.5-2小时 | 110-140元 |<br>
+          | C9470 | 成都东 | 08:12 | 10:01 | 约1.5-2小时 | 110-140元 |<br>
+          | C9474 | 成都东 | 13:55 | 15:52 | 约1.5-2小时 | 110-140元 |<br>
+          黄龙九寨站 → 黄龙景区：约27公里，车程35-45分钟<br>
+          景区直通车票价：约28-35元/人（单程），33元/人（到黄龙景区）<br><br>
+          🚌 大巴（性价比之选）<br>
+          成都茶店子/新南门汽车站<br>
+          每日有直达九寨沟的班车，可在川主寺或黄龙路口下车<br>
+          票价约150-168元，车程约6-8小时 <br>
+          到达后需换乘当地车辆前往黄龙景区<br><br>
+          🚗 自驾<br>
+          ①推荐路线（九绵高速）：<br>
+          成都 → 绵阳 → 江油 → 平武 → 松潘 → 黄龙，约440公里<br>
+          2025年底九绵高速全线通车，车程约4-4.5小时，是最快路线 <br>
+          ②经典西线：<br>
+          成都 → 都江堰 → 汶川 → 茂县 → 松潘 → 黄龙，约400公里<br>
+          车程约7-9小时，沿途可游览都江堰、汶川遗址、松潘古城等 <br><br>
+
         </div>
       </div>
     </main>
     <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".tab-pane")
-            .forEach((p) => p.classList.add("hidden"));
-          tabs.forEach((t) => {
-            t.classList.remove("bg-blue-600", "text-white");
-            t.classList.add("bg-gray-200");
-          });
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-          tab.classList.add("bg-blue-600", "text-white");
-        });
+  const tabs = document.querySelectorAll(".tab-btn");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      tabs.forEach((t) => {
+        t.classList.remove("bg-blue-600", "text-white");
+        t.classList.add("bg-gray-200");
       });
-    </script>
+      const target = document.getElementById(tab.dataset.target);
+      target.classList.remove("hidden");
+      tab.classList.remove("bg-gray-200");
+      tab.classList.add("bg-blue-600", "text-white");
+    });
+  });
+
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get("tab");
+    
+    if (tab === "food") document.querySelector('[data-target="food"]').click();
+    if (tab === "traffic") document.querySelector('[data-target="traffic"]').click();
+    if (tab === "hotel") document.querySelector('[data-target="hotel"]').click();
+  };
+</script>
      <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>

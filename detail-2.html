@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body class="bg-gray-50">
-    <!-- 左上角返回按钮 -->
-    <a
-      href="scenery.html"
-      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
-      >← 返回</a
-    >
+   <!-- 左上角返回按钮 -->
+<a
+  href="javascript:history.back()"
+  class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+>← 返回</a>
       <!-- 1. 顶部景点大图 -->
       <section class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -120,28 +119,54 @@
       </div>
       <div class="tab-pane hidden" id="traffic">
         <div class="bg-white p-6 rounded-xl shadow">
-          飞机：成都→九寨机场约1小时，转车1.5小时；高铁2小时；自驾约7-8小时。
+          🚄 最推荐：高铁 + 景区直通车<br>
+          | 车次    | 发车站 | 发车时间  | 到达时间  | 全程时长   | 二等座票价 |<br>
+          | ----- | --- | ----- | ----- | ------ | ----- |<br>
+          | C5782 | 成都东 | 06:45 | 08:24 | 1小时39分 | 140元  |<br>
+          | C9470 | 成都东 | 08:12 | 10:01 | 1小时49分 | 140元  |<br>
+          | C9474 | 成都东 | 13:55 | 15:52 | 1小时57分 | 140元  |<br>
+          | D280  | 成都西 | 16:02 | 18:27 | 2小时25分 | 129元  |<br>
+          总耗时：约3.5-4小时（高铁+直通车）<br>
+          换乘：黄龙九寨站下车后，换乘景区直通车约2小时直达九寨沟沟口，票价51元/人<br><br>
+          🚌 性价比之选：大巴<br>
+          新南门汽车站<br>
+          每日1班，早上7:55发车，票价约139元<br>
+          直达九寨沟沟口客运站，距景区入口仅5分钟步行路程<br>
+          全程约8-10小时 <br><br>
+          🚗 自驾（适合多人同行/深度游）<br>
+          ①西线（经典人文景观）：成都 → 都江堰 → 汶川 → 茂县 → 松潘古城 → 九寨沟，约410公里，7-8小时。都汶高速路况优良，G213国道弯道较多。 <br>
+          ②东线（最快高速通道）：成都 → 绵阳 → 江油 → 平武 → 九寨沟，约430公里，5.5-6小时。2025年底九绵高速全线通车，成为最快路线。 <br>
+          ③冬季自驾必备：防滑链、防冻液（冰点-25℃以下）、检查轮胎花纹深度，避免夜间行车。 <br>
+          PS停车：首选漳扎镇沟口停车场（约2000个车位），旺季务必早8点前抵达。<br>
+
         </div>
       </div>
     </main>
-    <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".tab-pane")
-            .forEach((p) => p.classList.add("hidden"));
-          tabs.forEach((t) => {
-            t.classList.remove("bg-blue-600", "text-white");
-            t.classList.add("bg-gray-200");
-          });
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-          tab.classList.add("bg-blue-600", "text-white");
-        });
+   <script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      tabs.forEach((t) => {
+        t.classList.remove("bg-blue-600", "text-white");
+        t.classList.add("bg-gray-200");
       });
-    </script>
+      const target = document.getElementById(tab.dataset.target);
+      target.classList.remove("hidden");
+      tab.classList.remove("bg-gray-200");
+      tab.classList.add("bg-blue-600", "text-white");
+    });
+  });
+
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get("tab");
+    
+    if (tab === "food") document.querySelector('[data-target="food"]').click();
+    if (tab === "traffic") document.querySelector('[data-target="traffic"]').click();
+    if (tab === "hotel") document.querySelector('[data-target="hotel"]').click();
+  };
+</script>
      <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>

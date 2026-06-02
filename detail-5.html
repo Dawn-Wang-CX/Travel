@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body class="bg-gray-50">
-    <!-- 左上角返回按钮 -->
-    <a
-      href="scenery.html"
-      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
-      >← 返回</a
-    >
+   <!-- 左上角返回按钮 -->
+<a
+  href="javascript:history.back()"
+  class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+>← 返回</a>
       <!-- 1. 顶部景点大图 -->
       <section class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -120,28 +119,56 @@
       </div>
       <div class="tab-pane hidden" id="traffic">
         <div class="bg-white p-6 rounded-xl shadow">
-          飞机至亚丁机场再转车；自驾约12小时。
+          🚗 最推荐：自驾/包车（风景最佳，灵活自由）<br>
+          经典南线（G318川藏线）<br>
+          路线：成都 → 雅安 → 泸定 → 康定 → 新都桥 → 雅江 → 理塘 → 稻城 → 香格里拉镇（亚丁景区入口）<br>
+          距离：约780-800公里 <br>
+          耗时：建议分2天驾驶，中途在康定或新都桥休息一晚<br>
+          路况：全程铺装路面，但山路弯多坡陡，尤其折多山、高尔寺山段需谨慎驾驶；雨季注意塌方落石 <br><br>
+          🚌 大巴（性价比最高，逐步适应海拔）<br>
+          成都新南门汽车站<br>
+          每日一班，早上6:30发车，直达香格里拉镇（亚丁景区入口）<br>
+          票价约300-350元，车程约16小时（一天直达）或14-15小时（两天，第一晚康定停留）<br>
+          购票：12306 APP → 汽车票 → 选"成都→亚丁（香格里拉镇）"，注意不是"稻城" <br>
+          优点：便宜、省心，沿途逐步适应海拔<br>
+          缺点：时间长、山路弯多易晕车，需备晕车药<br><br>
+          ✈️ 飞机（最快但高反风险高）<br>
+          成都 → 稻城亚丁机场<br>
+          飞行约1-1.5小时，淡季机票约400-600元，旺季1000元+<br>
+          重要提示：稻城亚丁机场海拔4411米，是世界海拔最高的民用机场之一。从平原直飞极易引发严重高原反应，风险极高 <br>
+          机场交通：<br>
+          机场大巴到稻城县城：约1小时，35元/人<br>
+          机场大巴到香格里拉镇：约1.5小时，50-85元/人（仅旺季开通）<br>
+          拼车到香格里拉镇：约80元/人 <br><br>
+
         </div>
       </div>
     </main>
-    <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".tab-pane")
-            .forEach((p) => p.classList.add("hidden"));
-          tabs.forEach((t) => {
-            t.classList.remove("bg-blue-600", "text-white");
-            t.classList.add("bg-gray-200");
-          });
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-          tab.classList.add("bg-blue-600", "text-white");
-        });
+   <script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      tabs.forEach((t) => {
+        t.classList.remove("bg-blue-600", "text-white");
+        t.classList.add("bg-gray-200");
       });
-    </script>
+      const target = document.getElementById(tab.dataset.target);
+      target.classList.remove("hidden");
+      tab.classList.remove("bg-gray-200");
+      tab.classList.add("bg-blue-600", "text-white");
+    });
+  });
+
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get("tab");
+    
+    if (tab === "food") document.querySelector('[data-target="food"]').click();
+    if (tab === "traffic") document.querySelector('[data-target="traffic"]').click();
+    if (tab === "hotel") document.querySelector('[data-target="hotel"]').click();
+  };
+</script>
      <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>

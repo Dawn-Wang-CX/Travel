@@ -8,11 +8,10 @@
   </head>
   <body class="bg-gray-50">
     <!-- 左上角返回按钮 -->
-    <a
-      href="scenery.html"
-      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
-      >← 返回</a
-    >
+<a
+  href="javascript:history.back()"
+  class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+>← 返回</a>
       <!-- 1. 顶部景点大图 -->
       <section class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -97,28 +96,58 @@
       </div>
       <div class="tab-pane hidden" id="traffic">
         <div class="bg-white p-6 rounded-xl shadow">
-          成都自驾约4小时；茶店子大巴至小金县转车约5小时。
+          🚗 最推荐：自驾<br>
+          ①经典路线：熊猫大道（G350）<br>
+          路线：成都 → 都江堰 → 映秀 → 卧龙 → 巴郎山 → 四姑娘山镇（日隆镇）<br>
+          距离：约175-200公里 <br>
+          耗时：约4-5小时（视路况和天气）<br>
+          路况：全程铺装路面，巴郎山段弯多坡陡，建议老司机驾驶；普通SUV即可通行<br>
+          ②其他自驾路线：<br>
+          a.理小路：成都 → 蓉昌高速 → 理县朴头 → 理小路 → 沃日镇 → 四姑娘山，全程约340公里 <br>
+          b.夹金山线：成都 → 成雅高速 → 宝兴 → 夹金山 → 达维 → 四姑娘山，全程约310公里，风景优美但山路较多 <br>
+          c.川西环线：成都 → 雅安 → 泸定 → 丹巴 → 小金 → 四姑娘山，全程约640公里，适合深度游 <br>
+          ❗️自驾贴士：<br>
+          出发前检查刹车和轮胎，冬季需备防滑链（巴郎山垭口可能有暗冰）<br>
+          建议上午8点前出发，中午即可抵达四姑娘山镇 <br>
+          映秀至耿达段曾为地震损毁路段，目前已重建通车，但仍需谨慎驾驶<br><br>
+          🚌 公共交通（无高铁直达）<br>
+          ①大巴（茶店子客运站）<br>
+          成都茶店子客运站有直达四姑娘山镇的小型巴士<br>
+          车程约4-6小时，票价约120-150元<br>
+          建议提前预订车票，告知司机目的地为四姑娘山，可送至住宿门口<br>
+          ②景区直通车/一日游团<br>
+          成都市区（春熙路、宽窄巷子等）有直达四姑娘山的一日游团<br>
+          包含往返交通+门票，适合不想自驾的游客<br>
+          参考行程：早6:00出发 → 猫鼻梁观景台（停留20分钟）→ 双桥沟游览（约5小时）→ 下午15:00返程 <br>
+
         </div>
       </div>
     </main>
-    <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".tab-pane")
-            .forEach((p) => p.classList.add("hidden"));
-          tabs.forEach((t) => {
-            t.classList.remove("bg-blue-600", "text-white");
-            t.classList.add("bg-gray-200");
-          });
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-          tab.classList.add("bg-blue-600", "text-white");
-        });
+  <script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      tabs.forEach((t) => {
+        t.classList.remove("bg-blue-600", "text-white");
+        t.classList.add("bg-gray-200");
       });
-    </script>
+      const target = document.getElementById(tab.dataset.target);
+      target.classList.remove("hidden");
+      tab.classList.remove("bg-gray-200");
+      tab.classList.add("bg-blue-600", "text-white");
+    });
+  });
+
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get("tab");
+    
+    if (tab === "food") document.querySelector('[data-target="food"]').click();
+    if (tab === "traffic") document.querySelector('[data-target="traffic"]').click();
+    if (tab === "hotel") document.querySelector('[data-target="hotel"]').click();
+  };
+</script>
     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>

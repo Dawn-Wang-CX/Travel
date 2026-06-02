@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body class="bg-gray-50">
-    <!-- 左上角返回按钮 -->
-    <a
-      href="scenery.html"
-      class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
-      >← 返回</a
-    >
+   <!-- 左上角返回按钮 -->
+<a
+  href="javascript:history.back()"
+  class="fixed top-4 left-4 z-[9999] bg-blue-100/80 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-lg shadow-md"
+>← 返回</a>
       <!-- 1. 顶部景点大图 -->
       <section class="w-full h-64 md:h-96 overflow-hidden">
         <img
@@ -111,28 +110,52 @@
       </div>
       <div class="tab-pane hidden" id="traffic">
         <div class="bg-white p-6 rounded-xl shadow">
-          理塘自驾约1.5小时，需SUV；拼车100-150元。
+          🚗 最推荐：自驾/包车<br>
+          ①常规路线<br>
+          路线：成都 → 雅康高速 → 康定 → 折多山 → 新都桥 → 雅江 → 理塘 → 格聂南线（铁匠山垭口 → 然日卡村 → 格聂之眼 → 则巴村 → 冷古寺 → 巴塘）<br>
+          成都至理塘：约550公里，车程约6-8小时 <br>
+          理塘至格聂核心区：约2-3小时车程 <br>
+          路况：理塘至格聂神山路段路况平缓，适合小轿车前往；但格聂南线穿越至巴塘路段有炮弹坑、涉水路，轿车慎入 <br>
+          ②格聂南线（理塘 ↔ 巴塘）<br>
+          全程：约230-250公里，正穿反穿均可 <br>
+          路况：全程以铺装路面为主，但中后段约15-20公里为非铺装路，炮弹坑、碎石路多 <br>
+          车辆建议：强烈建议SUV或硬派越野车（如坦克300、哈弗猛龙等四驱车），轿车慎入，电车不建议<br><br><br>
+          🚌 公共交通（需多次换乘，适合背包客）<br>
+          ①成都 → 理塘<br>
+          大巴：成都新南门汽车站有发往理塘的班车，车程约10-12小时<br>
+          路线：成都 → 康定（可换乘）→ 新都桥 → 雅江 → 理塘<br>
+          ②理塘 → 格聂神山/各村落<br>
+          理塘县城有当地小巴或包车前往格聂镇、然日卡村等<br>
+          至各核心景点（格聂之眼、则巴村、冷古寺）需包车或拼车，当地包车约800-1500元/天<br>
+
         </div>
       </div>
     </main>
-    <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".tab-pane")
-            .forEach((p) => p.classList.add("hidden"));
-          tabs.forEach((t) => {
-            t.classList.remove("bg-blue-600", "text-white");
-            t.classList.add("bg-gray-200");
-          });
-          document
-            .getElementById(tab.dataset.target)
-            .classList.remove("hidden");
-          tab.classList.add("bg-blue-600", "text-white");
-        });
+   <script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab-pane").forEach((p) => p.classList.add("hidden"));
+      tabs.forEach((t) => {
+        t.classList.remove("bg-blue-600", "text-white");
+        t.classList.add("bg-gray-200");
       });
-    </script>
+      const target = document.getElementById(tab.dataset.target);
+      target.classList.remove("hidden");
+      tab.classList.remove("bg-gray-200");
+      tab.classList.add("bg-blue-600", "text-white");
+    });
+  });
+
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get("tab");
+    
+    if (tab === "food") document.querySelector('[data-target="food"]').click();
+    if (tab === "traffic") document.querySelector('[data-target="traffic"]').click();
+    if (tab === "hotel") document.querySelector('[data-target="hotel"]').click();
+  };
+</script>
      <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>
