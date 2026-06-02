@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GitHub Pages 手机速度拉满 -->
+    <meta http-equiv="Cache-Control" content="max-age=86400" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="./" />
+
+    <!-- 预加载详情页，点击秒开 -->
+    <link rel="prefetch" href="detail-1.html" />
+    <link rel="prefetch" href="detail-2.html" />
+    <link rel="prefetch" href="detail-3.html" />
+    <link rel="prefetch" href="detail-4.html" />
+    <link rel="prefetch" href="detail-5.html" />
+    <link rel="prefetch" href="detail-6.html" />
+    <link rel="prefetch" href="detail-7.html" />
+    <link rel="prefetch" href="detail-8.html" />
+    <link rel="prefetch" href="detail-9.html" />
+
     <title>川西美食大全 - 旅游网</title>
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body class="bg-gray-50">
-    <!-- 统一导航 -->
+    <!-- 导航 -->
     <header
       class="shadow-md sticky top-0 z-50"
       style="background: linear-gradient(to right, #59c3b8, #2d7d80)"
@@ -44,81 +61,146 @@
     <main class="container mx-auto px-4 py-12">
       <h1 class="text-3xl font-bold text-center mb-10">川西特色美食大全</h1>
 
-        <div class="grid md:grid-cols-2 gap-8 px-4">
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/1-food1.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">青城山·都江堰</h3>
-      <p class="text-white font-bold">葱葱卷、叶儿粑、赵卖面、道家素斋</p>
-      <a href="detail-1.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+      <div class="grid md:grid-cols-2 gap-8 px-4">
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/1-food1.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">青城山·都江堰</h3>
+            <p class="text-white font-bold">葱葱卷、叶儿粑、赵卖面、道家素斋</p>
+            <a
+              href="detail-1.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/2-food2.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">九寨沟</h3>
-      <p class="text-white font-bold">牦牛肉火锅、藏式土火锅、酥油茶、青稞饼</p>
-      <a href="detail-2.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/2-food2.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">九寨沟</h3>
+            <p class="text-white font-bold">
+              牦牛肉火锅、藏式土火锅、酥油茶、青稞饼
+            </p>
+            <a
+              href="detail-2.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/3-food3.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">黄龙</h3>
-      <p class="text-white font-bold">藏餐、青稞酒、高原菌菇菜</p>
-      <a href="detail-3.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/3-food3.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">黄龙</h3>
+            <p class="text-white font-bold">藏餐、青稞酒、高原菌菇菜</p>
+            <a
+              href="detail-3.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/4-food2.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">四姑娘山</h3>
-      <p class="text-white font-bold">牦牛肉汤锅、烤全羊</p>
-      <a href="detail-4.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/4-food2.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">四姑娘山</h3>
+            <p class="text-white font-bold">牦牛肉汤锅、烤全羊</p>
+            <a
+              href="detail-4.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/5-food3.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">稻城亚丁</h3>
-      <p class="text-white font-bold">牦牛肉火锅、松茸炖鸡、高原鳕鱼、牦牛酸奶</p>
-      <a href="detail-5.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/5-food3.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">稻城亚丁</h3>
+            <p class="text-white font-bold">
+              牦牛肉火锅、松茸炖鸡、高原鳕鱼、牦牛酸奶
+            </p>
+            <a
+              href="detail-5.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/6-food1.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">贡嘎雪山</h3>
-      <p class="text-white font-bold">藏面、酥油茶、土火锅</p>
-      <a href="detail-6.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/6-food1.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">贡嘎雪山</h3>
+            <p class="text-white font-bold">藏面、酥油茶、土火锅</p>
+            <a
+              href="detail-6.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/7-food3.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">墨石公园</h3>
-      <p class="text-white font-bold">藏餐、牦牛肉包子、青稞饼</p>
-      <a href="detail-7.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/7-food3.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">墨石公园</h3>
+            <p class="text-white font-bold">藏餐、牦牛肉包子、青稞饼</p>
+            <a
+              href="detail-7.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/5-food4.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">格聂神山</h3>
-      <p class="text-white font-bold">高原鳕鱼、牦牛肉火锅、藏面、牦牛酸奶</p>
-      <a href="detail-8.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/5-food4.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">格聂神山</h3>
+            <p class="text-white font-bold">
+              高原鳕鱼、牦牛肉火锅、藏面、牦牛酸奶
+            </p>
+            <a
+              href="detail-8.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
+        </div>
 
-  <div class="h-56 rounded-xl shadow overflow-hidden relative" style="background:url('./images/9-food1.jpg') center/cover;">
-    <div class="absolute bottom-0 left-0 p-4">
-      <h3 class="text-xl font-bold mb-1 text-white">塔公草原</h3>
-      <p class="text-white font-bold">牦牛肉汤锅、糌粑、藏式面点</p>
-      <a href="detail-9.html?tab=food" class="text-amber-200 font-bold mt-2 block">查看详情 →</a>
-    </div>
-  </div>
-  
-</div>
-
+        <div
+          class="h-56 rounded-xl shadow overflow-hidden relative"
+          style="background: url(&quot;./images/9-food1.jpg&quot;) center/cover"
+        >
+          <div class="absolute bottom-0 left-0 p-4">
+            <h3 class="text-xl font-bold mb-1 text-white">塔公草原</h3>
+            <p class="text-white font-bold">牦牛肉汤锅、糌粑、藏式面点</p>
+            <a
+              href="detail-9.html?tab=food"
+              class="text-amber-200 font-bold mt-2 block"
+              >查看详情 →</a
+            >
+          </div>
         </div>
       </div>
     </main>
