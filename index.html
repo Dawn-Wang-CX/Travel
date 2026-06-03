@@ -1,142 +1,178 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="max-age=86400" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="./" />
 
-  <!-- GitHub Pages 手机速度拉满 -->
-  <meta http-equiv="Cache-Control" content="max-age=86400">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="preconnect" href="./">
+    <title>川西旅游网 - 首页</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/dist/output.css"
+    />
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <header>
+      <div style="background: linear-gradient(to right, #59c3b8, #2d7d80)">
+        <div
+          class="container mx-auto px-4 py-4 flex justify-between items-center"
+        >
+          <h1 class="text-xl md:text-2xl font-bold text-white">
+            🌏 川西旅游网
+          </h1>
+          <nav class="hidden md:flex gap-6 text-white/90">
+            <a
+              href="index.html"
+              class="text-white font-bold border-b-2 border-white pb-1"
+              >首页</a
+            >
+            <a
+              href="scenery.html"
+              class="hover:text-amber-100 transition-colors"
+              >景点介绍</a
+            >
+            <a href="food.html" class="hover:text-amber-100 transition-colors"
+              >美食</a
+            >
+            <a href="hotel.html" class="hover:text-amber-100 transition-colors"
+              >住宿</a
+            >
+            <a
+              href="traffic.html"
+              class="hover:text-amber-100 transition-colors"
+              >交通</a
+            >
+            <a href="about.html" class="hover:text-amber-100 transition-colors"
+              >关于我们</a
+            >
+          </nav>
+          <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+          <nav class="flex flex-col gap-3 text-white/90">
+            <a href="index.html" class="text-white font-bold">首页</a>
+            <a
+              href="scenery.html"
+              class="hover:text-amber-100 transition-colors"
+              >景点介绍</a
+            >
+            <a href="food.html" class="hover:text-amber-100 transition-colors"
+              >美食</a
+            >
+            <a href="hotel.html" class="hover:text-amber-100 transition-colors"
+              >住宿</a
+            >
+            <a
+              href="traffic.html"
+              class="hover:text-amber-100 transition-colors"
+              >交通</a
+            >
+            <a href="about.html" class="hover:text-amber-100 transition-colors"
+              >关于我们</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
 
-  <title>川西旅游网 - 首页</title>
-  <link rel="stylesheet" href="./dist/output.css" />
-</head>
-<body class="bg-gray-50 font-sans">
-<!-- 导航栏 雪山青绿配色 -->
-
-<header>
-  <!-- 雪山冰湖青绿渐变 -->
-  <div style="background: linear-gradient(to right, #59c3b8, #2d7d80);">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl md:text-2xl font-bold text-white">
-        🌏 川西旅游网
-      </h1>
-      <!-- 桌面横向菜单：≥768px显示 -->
-      <nav class="hidden md:flex gap-6 text-white/90">
-        <a href="index.html" class="text-white font-bold border-b-2 border-white pb-1">首页</a>
-        <a href="scenery.html" class="hover:text-amber-100 transition-colors">景点介绍</a>
-        <a href="food.html" class="hover:text-amber-100 transition-colors">美食</a>
-        <a href="hotel.html" class="hover:text-amber-100 transition-colors">住宿</a>
-        <a href="traffic.html" class="hover:text-amber-100 transition-colors">交通</a>
-        <a href="about.html" class="hover:text-amber-100 transition-colors">关于我们</a>
-      </nav>
-      <!-- 手机汉堡按钮：<768px显示 -->
-      <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
-    </div>
-    <!-- 移动端下拉菜单 默认隐藏，同渐变背景 -->
-    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
-      <nav class="flex flex-col gap-3 text-white/90">
-        <a href="index.html" class="text-white font-bold">首页</a>
-        <a href="scenery.html" class="hover:text-amber-100 transition-colors">景点介绍</a>
-        <a href="food.html" class="hover:text-amber-100 transition-colors">美食</a>
-        <a href="hotel.html" class="hover:text-amber-100 transition-colors">住宿</a>
-        <a href="traffic.html" class="hover:text-amber-100 transition-colors">交通</a>
-        <a href="about.html" class="hover:text-amber-100 transition-colors">关于我们</a>
-      </nav>
-    </div>
-  </div>
-</header>
-</body>
-</html>
-
-    <!-- 9张图自动轮播 + 左右箭头 -->
     <section class="relative h-64 md:h-[480px] overflow-hidden">
       <div id="slider" class="relative h-full">
         <div
           class="slider-item absolute inset-0 bg-cover bg-center flex items-center justify-center"
-          style="background-image: url(&quot;./images/1.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/1.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">青城山·都江堰</h2>
             <p class="text-lg md:text-xl">青城揽幽山古韵，都江润千年天府</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/2.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/2.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">九寨沟</h2>
             <p class="text-lg md:text-xl">一眼瑶池碧水，满目人间仙境</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/3.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/3.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">黄龙</h2>
             <p class="text-lg md:text-xl">瑶池落人间，彩池映雪山</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/4.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/4.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">四姑娘山</h2>
             <p class="text-lg md:text-xl">雪山耸云海，清风入山林</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/5.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/5.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">稻城亚丁</h2>
             <p class="text-lg md:text-xl">徜徉三神山畔，沉醉雪域天堂</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/6.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/6.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">贡嘎雪山</h2>
             <p class="text-lg md:text-xl">朝圣蜀山之王，静待落日金山</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/7.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/7.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">墨石公园</h2>
             <p class="text-lg md:text-xl">漫步异域星球，触摸大地奇观</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/8.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/8.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">格聂神山</h2>
             <p class="text-lg md:text-xl">寻迹川西秘境，凝望格聂眼眸</p>
           </div>
         </div>
-
         <div
           class="slider-item absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 flex items-center justify-center"
-          style="background-image: url(&quot;./images/9.jpg&quot;)"
+          style="
+            background-image: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/9.jpg&quot;);
+          "
         >
           <div class="text-white text-center bg-black/30 px-6 py-3 rounded-lg">
             <h2 class="text-3xl md:text-5xl font-bold mb-2">塔公草原</h2>
@@ -145,15 +181,12 @@
         </div>
       </div>
 
-      <!-- 左箭头 -->
       <button
         id="prevBtn"
         class="fixed left-4 top-1/2 -translate-y-1/2 z-[9999] bg-white/30 hover:bg-white/60 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all"
       >
         ←
       </button>
-
-      <!-- 右箭头 -->
       <button
         id="nextBtn"
         class="fixed right-4 top-1/2 -translate-y-1/2 z-[9999] bg-white/30 hover:bg-white/60 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all"
@@ -162,32 +195,56 @@
       </button>
     </section>
 
-    <!-- 功能卡片 -->
     <main class="container mx-auto px-4 py-12">
-     <div class="grid md:grid-cols-3 gap-6">
-  <!-- 热门景点 index-1.jpg -->
-  <div class="p-6 rounded-xl shadow hover:shadow-lg transition" style="background:url('./images/index-1.jpg') center/cover;">
-    <h3 class="text-xl font-bold mb-2 text-white">热门景点</h3>
-    <p class="text-white/90 mb-4">9大川西绝美景点，一站式攻略</p>
-    <a href="scenery.html" class="text-amber-200 hover:text-amber-100 font-medium">查看详情 →</a>
-  </div>
-  <!-- 特色美食 index-2.jpg -->
-  <div class="p-6 rounded-xl shadow hover:shadow-lg transition" style="background:url('./images/index-2.jpg') center/cover;">
-    <h3 class="text-xl font-bold mb-2 text-white">特色美食</h3>
-    <p class="text-white/90 mb-4">藏餐、火锅、小吃，地道川西味</p>
-    <a href="food.html" class="text-amber-200 hover:text-amber-100 font-medium">查看详情 →</a>
-  </div>
-  <!-- 住宿交通 index-3.jpg -->
-  <div class="p-6 rounded-xl shadow hover:shadow-lg transition" style="background:url('./images/index-3.jpg') center/cover;">
-    <h3 class="text-xl font-bold mb-2 text-white">住宿交通</h3>
-    <p class="text-white/90 mb-4">省心规划，出行无忧</p>
-    <a href="hotel.html" class="text-amber-200 hover:text-amber-100 font-medium">查看详情 →</a>
-  </div>
-</div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div
+          class="p-6 rounded-xl shadow hover:shadow-lg transition"
+          style="
+            background: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/index-1.jpg&quot;)
+              center/cover;
+          "
+        >
+          <h3 class="text-xl font-bold mb-2 text-white">热门景点</h3>
+          <p class="text-white/90 mb-4">9大川西绝美景点，一站式攻略</p>
+          <a
+            href="scenery.html"
+            class="text-amber-200 hover:text-amber-100 font-medium"
+            >查看详情 →</a
+          >
+        </div>
+        <div
+          class="p-6 rounded-xl shadow hover:shadow-lg transition"
+          style="
+            background: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/index-2.jpg&quot;)
+              center/cover;
+          "
+        >
+          <h3 class="text-xl font-bold mb-2 text-white">特色美食</h3>
+          <p class="text-white/90 mb-4">藏餐、火锅、小吃，地道川西味</p>
+          <a
+            href="food.html"
+            class="text-amber-200 hover:text-amber-100 font-medium"
+            >查看详情 →</a
+          >
+        </div>
+        <div
+          class="p-6 rounded-xl shadow hover:shadow-lg transition"
+          style="
+            background: url(&quot;https://cdn.jsdelivr.net/gh/Dawn-Wang-CX/Travel@main/images/index-3.jpg&quot;)
+              center/cover;
+          "
+        >
+          <h3 class="text-xl font-bold mb-2 text-white">住宿交通</h3>
+          <p class="text-white/90 mb-4">省心规划，出行无忧</p>
+          <a
+            href="hotel.html"
+            class="text-amber-200 hover:text-amber-100 font-medium"
+            >查看详情 →</a
+          >
+        </div>
       </div>
     </main>
 
-    <!-- 留言提问交互区域 -->
     <section class="bg-teal-600 py-12 text-white">
       <div class="container mx-auto px-4 max-w-xl">
         <h2 class="text-2xl font-bold text-center mb-6">有问题？直接留言</h2>
@@ -218,7 +275,7 @@
           </div>
           <button
             type="submit"
-           class="w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-800"
+            class="w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-800"
           >
             提交
           </button>
@@ -226,7 +283,7 @@
       </div>
     </section>
 
-     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+    <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <p>© 2026 川西旅游网 All Rights Reserved</p>
     </footer>
 
@@ -263,9 +320,9 @@
       setInterval(nextSlide, 3500);
       showSlide();
 
-      const btn = document.getElementById('menuBtn')
-const menu = document.getElementById('mobileMenu')
-btn.onclick = () => menu.classList.toggle('hidden')
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      btn.onclick = () => menu.classList.toggle("hidden");
     </script>
   </body>
 </html>
